@@ -1,0 +1,17 @@
+- class_name: '<i class="fas fa-check-double" style="color: #FF6666;padding-right: 0.4rem"></i>胖友们'
+  class_desc: '<span style="font-style: italic;">噜啦噜啦嘞</span>'
+  link_list:
+    - name: 辛巳流火的Blog
+      link: https://huguoyang.cn
+      avatar: https://cdn.jsdelivr.net/gh/ambition-echo/img_bed/img/20211215232452.png
+      descr: 二大大，一大大，四下我就上天辣
+      
+    - name: Hey,Joker
+      link: https://jokerdig.com
+      avatar: https://cdn.jsdelivr.net/gh/JokerDaxiong/Jokerblog@main/source/images/author.png
+      descr: 一个代码小白的成长
+    
+    - name: 攻城狮杰森
+      link: https://coder-jason.cn
+      avatar: https://coder-jason.cn/img/head.JPG
+      descr: 热衷技术分享 & 遇见更好的自己
