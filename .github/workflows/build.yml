@@ -11,31 +11,26 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-      
-    - name: setup-nodejs
-      uses: actions/setup-node@v1
-      with:
-        node-version: "16.x"
-    
-    - name: Setup Hexo
-      run: |
-        # 安装必要组件
-        npm i -g hexo-cli # 安装hexo
-        npm install hexo-wordcount # 安装字数统计插件
-        npm install hexo-generator-search #安装本地搜索插件
-        npm install hexo-renderer-pug hexo-renderer-stylus --save
-        npm install hexo-tag-aplayer
-        npm install hexo-butterfly-douban --save
-        npm i
-    - name: Build
-    run: |
-      hexo generate
-
-    - name: Deploy
+      - uses: actions/checkout@v3
+      - name: setup-nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - name: Setup Hexo
+        run: |
+          # 安装必要组件
+          npm i -g hexo-cli # 安装hexo
+          npm install hexo-wordcount # 安装字数统计插件
+          npm install hexo-generator-search #安装本地搜索插件
+          npm install hexo-renderer-pug hexo-renderer-stylus --save
+          npm install hexo-tag-aplayer
+          npm install hexo-butterfly-douban --save
+          npm i
+      - name: Build
+        run: |
+        hexo generate
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           personal_token: ${{ secrets.TOKEN }}
@@ -43,5 +38,5 @@ jobs:
           publish_dir: public
           user_name: ambition_echo
           user_email: ambition_echo@outlook.com
-          commit_message: "update Docs"
+          commit_message: "update"
 
